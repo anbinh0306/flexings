@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #fcf6f2; /* Nền kem đào nhạt dịu mắt */
+    background-color: #e5ecf4; /* Màu xanh da trời pha xám rất dịu và sang, làm nổi bật cả tuyết lẫn chiếc thẻ trắng */
     color: #3d405b; /* Màu chữ xanh đen xám thanh lịch */
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
@@ -110,4 +110,91 @@ body {
 .btn-primary:hover {
     box-shadow: 0 10px 25px rgba(255, 158, 125, 0.4);
     transform: translateY(-2px);
+}
+
+/* Chỉnh sửa hiển thị cho các đoạn văn bản */
+.welcome-text, .info-text, .note-text, .community-text {
+    font-size: 0.95rem;
+    color: #5c607e;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-align: justify; /* Căn đều hai bên cho giống trang tạp chí */
+}
+
+/* Phong cách cho các đường link trong văn bản (Luxury & Soft Blue) */
+.text-link {
+    color: #6c9bc0;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px dashed rgba(108, 155, 192, 0.5); /* Đường gạch chân đứt nét tinh tế */
+    transition: all 0.2s ease;
+}
+
+.text-link:hover {
+    color: #ff9e7d; /* Đổi sang màu đào khi di chuột vào */
+    border-bottom: 1px solid #ff9e7d;
+}
+
+/* Điểm nhấn riêng cho link Discord */
+.discord-link {
+    color: #5865F2; /* Giữ màu xanh thương hiệu đặc trưng của Discord nhưng làm mượt hơn */
+    border-bottom-color: rgba(88, 101, 242, 0.4);
+}
+
+.discord-link:hover {
+    color: #ff9e7d;
+}
+
+/* Hộp chào mừng bọc nhẹ */
+.welcome-box {
+    background-color: #fff5f0; /* Nền đào siêu nhạt */
+    padding: 18px;
+    border-radius: 16px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 158, 125, 0.05);
+}
+
+/* Khung chứa tuyết phủ toàn màn hình */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Để người dùng vẫn bấm được các nút bên dưới */
+    z-index: 0; /* Nằm dưới lớp chữ nhưng trên lớp nền */
+    overflow: hidden;
+}
+
+/* Định nghĩa lại bông tuyết để nổi bật trên nền sáng */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    /* Thay vì màu trắng, dùng màu xanh dương pastel siêu nhạt và trong suốt */
+    background-color: rgba(180, 209, 227, 0.85); 
+    border-radius: 50%;
+    pointer-events: none;
+    /* Tăng độ đậm và bán kính của bóng đổ (màu đào mờ) để tạo độ tương phản với nền kem */
+    box-shadow: 0 0 6px rgba(255, 158, 125, 0.6), inset 0 0 2px rgba(255, 255, 255, 1);
+    /* Thêm hiệu ứng nhòe nhẹ để hạt tuyết nhìn giống như những giọt sương tinh thể lấp lánh */
+    filter: blur(0.4px);
+    animation: fall linear infinite;
+}
+
+/* Hiệu ứng chuyển động rơi và lắc lư nhẹ sang hai bên */
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1; /* Rời khỏi đỉnh màn hình thì hiện rõ */
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh) translateX(30px); /* Rơi quá đáy màn hình và hơi lệch phải */
+        opacity: 0; /* Biến mất dần ở đáy */
+    }
 }
