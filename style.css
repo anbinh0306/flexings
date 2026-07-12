@@ -1,0 +1,113 @@
+/* Nhúng các font chữ mới: Cormorant Garamond và Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fcf6f2; /* Nền kem đào nhạt dịu mắt */
+    color: #3d405b; /* Màu chữ xanh đen xám thanh lịch */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Khung chứa chính kiểu Postcard */
+.landing-container {
+    max-width: 480px;
+    width: 100%;
+    background-color: #ffffff; /* Thẻ trắng nổi bật */
+    border-radius: 24px; /* Bo góc mềm mại */
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(255, 158, 125, 0.15); /* Bóng đổ mang ánh đào nhạt */
+    border: 1px solid rgba(255, 158, 125, 0.1);
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem; /* Tăng cỡ chữ lên một chút */
+    font-weight: 600; /* Giảm độ dày xuống để chữ thanh mảnh, sang trọng hơn */
+    text-align: center;
+    letter-spacing: 6px; /* Tăng khoảng cách giữa các chữ cái để tạo vibe luxury */
+    color: #6c9bc0; /* Màu xanh dương thanh lịch */
+    margin-bottom: 8px;
+    text-transform: uppercase; /* Luôn viết hoa */
+}
+
+.subtitle {
+    text-align: center;
+    color: #8fa0af;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.author-name {
+    color: #ff9e7d; /* Tên tác giả màu hồng đào */
+    font-weight: 700;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(108, 155, 192, 0.2), rgba(255, 158, 125, 0.2));
+    margin: 30px 0;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    color: #5c607e;
+    font-weight: 400;
+}
+
+.tos-term-and-help {
+    padding-top: 2vh;
+}
+
+.tos-term-and-help p {
+    font-size: 0.95rem;
+    color: #5c607e;
+    font-weight: 400;
+}
+
+/* Hệ thống nút bấm */
+.navigation-links {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Nút bắt đầu màu Hồng Đào */
+.btn-primary {
+    background: linear-gradient(135deg, #ffb396, #ff9e7d);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 158, 125, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(255, 158, 125, 0.4);
+    transform: translateY(-2px);
+}
